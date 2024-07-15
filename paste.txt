@@ -1,0 +1,17 @@
+[
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: XyloForm | Columns: XID (INTEGER), ZyxSpec (VARCHAR(100)), InitPoint (DATE), AmountVal (DECIMAL(10,2)), SubGroup (VARCHAR(50))",
+        "output": "The \"XyloForm\" table contains data related to certain entities, including a unique identifier, a detailed specification, a start date, a decimal value, and an associated subgroup."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: TrackItems | Columns: TCode (VARCHAR(20)), TLabel (VARCHAR(200)), NumQuant (INTEGER), UVal (DECIMAL(8,2)), UpdLast (TIMESTAMP)",
+        "output": "The \"TrackItems\" table manages item-related data, storing a unique code, a descriptive label, a quantity, a unit value, and a timestamp for the most recent update."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: EvntUsers | Columns: EID (INTEGER), CatEvent (VARCHAR(50)), TimeEvent (TIMESTAMP), LocNet (INET), DataClient (JSON)",
+        "output": "The \"EvntUsers\" table logs events related to users, recording an event identifier, an event category, the time of the event, a network location, and additional client data in JSON format."
+    }
+]
