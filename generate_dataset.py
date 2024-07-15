@@ -2,11 +2,17 @@ import requests
 import json
 import random
 import hashlib
+import os
 
 # Constant Variables
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 INITIAL_SAMPLES = "initial_samples.txt"
-NUM_NEW_SAMPLES = 10000
+NUM_NEW_SAMPLES = 5000
+BATCH_SIZE = 10
+SAVE_DIR = "sample_batches"
+
+# Ensure the save directory exists
+os.makedirs(SAVE_DIR, exist_ok=True)
 
 # Function to generate a prompt based on existing samples
 def generate_prompt(samples):
@@ -57,13 +63,23 @@ def hash_sample(sample):
     sample_str = json.dumps(sample, sort_keys=True)
     return hashlib.md5(sample_str.encode()).hexdigest()
 
+# Function to save a batch of samples to a JSON file
+def save_batch(batch, batch_number):
+    filename = os.path.join(SAVE_DIR, f"sample_batch_{batch_number}.json")
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(batch, f, ensure_ascii=False, indent=2)
+    print(f"Saved batch {batch_number} to {filename}")
+
 # Main function to generate new dataset samples
 def generate_dataset(existing_samples, num_new_samples, max_attempts=3):
-    new_samples = []
     existing_hashes = set(hash_sample(sample) for sample in existing_samples)
     
     attempts = 0
-    while len(new_samples) < num_new_samples and attempts < max_attempts * num_new_samples:
+    batch = []
+    batch_number = 1
+    generated_count = 0
+
+    while generated_count < num_new_samples and attempts < max_attempts * num_new_samples:
         # Select a random subset of existing samples to use as context
         context_samples = random.sample(existing_samples, min(5, len(existing_samples)))
         prompt = generate_prompt(context_samples)
@@ -73,35 +89,35 @@ def generate_dataset(existing_samples, num_new_samples, max_attempts=3):
             if all(key in parsed_sample for key in ["instruction", "input", "output"]):
                 sample_hash = hash_sample(parsed_sample)
                 if sample_hash not in existing_hashes:
-                    new_samples.append(parsed_sample)
+                    batch.append(parsed_sample)
                     existing_hashes.add(sample_hash)
-                    print(f"Generated new unique sample {len(new_samples)}/{num_new_samples}")
+                    generated_count += 1
+                    print(f"Generated new unique sample {generated_count}/{num_new_samples}")
+
+                    if len(batch) == BATCH_SIZE:
+                        save_batch(batch, batch_number)
+                        batch = []
+                        batch_number += 1
                 else:
                     print("Duplicate sample generated, skipping...")
             else:
                 print(f"Skipping improperly formatted sample: {new_sample_text}")
         attempts += 1
-    
-    if len(new_samples) < num_new_samples:
-        print(f"Warning: Only generated {len(new_samples)} unique samples out of {num_new_samples} requested.")
-    
-    return new_samples
 
-# Function to save samples to a JSON file
-def save_to_json(samples, filename):
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(samples, f, ensure_ascii=False, indent=2)
+    # Save any remaining samples in the last batch
+    if batch:
+        save_batch(batch, batch_number)
 
-# Example usage
+    if generated_count < num_new_samples:
+        print(f"Warning: Only generated {generated_count} unique samples out of {num_new_samples} requested.")
+    
+    return generated_count
+
+# Load existing samples
 existing_samples = json.loads(open(INITIAL_SAMPLES).read())
 
-new_samples = generate_dataset(existing_samples, NUM_NEW_SAMPLES)
+# Generate new samples
+new_samples_count = generate_dataset(existing_samples, NUM_NEW_SAMPLES)
 
-# Combine existing and new samples
-all_samples = existing_samples + new_samples
-
-# Save all samples to a JSON file
-save_to_json(all_samples, "dataset_samples.json")
-
-print(f"Generated {len(new_samples)} new samples.")
-print(f"Total {len(all_samples)} samples saved to dataset_samples.json")
+print(f"Generated {new_samples_count} new samples in total.")
+print(f"Samples are saved in batches of {BATCH_SIZE} in the '{SAVE_DIR}' directory.")
