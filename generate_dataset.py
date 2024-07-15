@@ -6,6 +6,7 @@ import hashlib
 # Constant Variables
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 INITIAL_SAMPLES = "initial_samples.txt"
+NUM_NEW_SAMPLES = 10000
 
 # Function to generate a prompt based on existing samples
 def generate_prompt(samples):
@@ -94,8 +95,7 @@ def save_to_json(samples, filename):
 # Example usage
 existing_samples = json.loads(open(INITIAL_SAMPLES).read())
 
-num_new_samples = 5
-new_samples = generate_dataset(existing_samples, num_new_samples)
+new_samples = generate_dataset(existing_samples, NUM_NEW_SAMPLES)
 
 # Combine existing and new samples
 all_samples = existing_samples + new_samples
