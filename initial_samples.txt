@@ -1,0 +1,82 @@
+[
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: XyloForm | Columns: XID (INTEGER), ZyxSpec (VARCHAR(100)), InitPoint (DATE), AmountVal (DECIMAL(10,2)), SubGroup (VARCHAR(50))",
+        "output": "The \"XyloForm\" table contains data related to certain entities, including a unique identifier, a detailed specification, a start date, a decimal value, and an associated subgroup."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: TrackItems | Columns: TCode (VARCHAR(20)), TLabel (VARCHAR(200)), NumQuant (INTEGER), UVal (DECIMAL(8,2)), UpdLast (TIMESTAMP)",
+        "output": "The \"TrackItems\" table manages item-related data, storing a unique code, a descriptive label, a quantity, a unit value, and a timestamp for the most recent update."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: EvntUsers | Columns: EID (INTEGER), CatEvent (VARCHAR(50)), TimeEvent (TIMESTAMP), LocNet (INET), DataClient (JSON)",
+        "output": "The \"EvntUsers\" table logs events related to users, recording an event identifier, an event category, the time of the event, a network location, and additional client data in JSON format."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: QwertyLine | Columns: QID (INTEGER), AsdfValue (VARCHAR(150)), ZxcDate (DATE), PoiAmount (DECIMAL(9,3)), LkjSubGroup (VARCHAR(60))",
+        "output": "The \"QwertyLine\" table stores detailed information for various records, including a unique identifier, a descriptive value, the date of the record, a decimal amount, and a subgroup classification."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: FooData | Columns: FooID (UUID), BarLabel (VARCHAR(250)), BazQuant (INTEGER), QuxValue (DECIMAL(7,2)), CorgeLastUpdate (TIMESTAMP)",
+        "output": "The \"FooData\" table manages comprehensive item data, storing a unique identifier, a detailed label, the quantity available, a decimal value, and the timestamp of the last update."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: EventFrobs | Columns: EFID (INTEGER), EventType (VARCHAR(75)), FrobTime (TIMESTAMP), QuuxNet (INET), BlorbClientData (JSON)",
+        "output": "The \"EventFrobs\" table logs user events, including a unique event ID, the type of event, the timestamp when the event occurred, the network location, and additional client-specific data in JSON format."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: OrderBlips | Columns: OBlipID (INTEGER), ProdCode (VARCHAR(25)), BlipQty (INTEGER), BlipPrice (DECIMAL(8,2)), BlipDiscount (FLOAT)",
+        "output": "The \"OrderBlips\" table records the details of customer orders, including a unique order identifier, the product code, quantity ordered, price per item, and any applicable discounts."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: SessBizz | Columns: SBizID (UUID), UserRef (INTEGER), BizLogin (TIMESTAMP), BizLogout (TIMESTAMP), BizIP (VARCHAR(40))",
+        "output": "The \"SessBizz\" table tracks user sessions, recording a unique session identifier, user reference ID, login and logout timestamps, and the IP address used during the session."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: RevStars | Columns: RStarID (INTEGER), ItemID (INTEGER), UserRefID (INTEGER), StarRating (INTEGER), StarReview (TEXT), StarDate (DATE)",
+        "output": "The \"RevStars\" table captures customer reviews for products, including a unique review ID, the product ID, user reference ID, star rating, review text, and the date of the review."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: StockBits | Columns: SBitID (INTEGER), SBitName (VARCHAR(90)), SBitQty (INTEGER), SBitReorder (INTEGER), SupplierRef (INTEGER)",
+        "output": "The \"StockBits\" table contains inventory details, including a unique stock item identifier, item name, quantity in stock, reorder level, and supplier reference."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: EmpBlobs | Columns: EBlobID (INTEGER), BlobFirst (VARCHAR(55)), BlobLast (VARCHAR(55)), BlobHire (DATE), BlobDept (INTEGER), BlobSalary (DECIMAL(10,2))",
+        "output": "The \"EmpBlobs\" table holds employee information, including a unique employee identifier, first and last names, hire date, department ID, and salary."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: TransSpans | Columns: TSpanID (INTEGER), AccRef (INTEGER), SpanType (VARCHAR(60)), SpanDate (TIMESTAMP), SpanAmount (DECIMAL(12,2))",
+        "output": "The \"TransSpans\" table records financial transactions, including a unique transaction identifier, account reference, type of transaction, timestamp, and transaction amount."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: CoursPuffs | Columns: CPuffID (INTEGER), PuffName (VARCHAR(120)), PuffCredits (INTEGER), PuffDept (INTEGER), PuffInstructor (INTEGER)",
+        "output": "The \"CoursPuffs\" table stores information about educational courses, including a unique course identifier, course name, number of credits, department ID, and instructor ID."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: PayWhizzes | Columns: PWhizID (INTEGER), UserRefID (INTEGER), WhizAmount (DECIMAL(10,2)), WhizDate (DATE), WhizMethod (VARCHAR(40))",
+        "output": "The \"PayWhizzes\" table logs payment transactions, including a unique payment identifier, user reference ID, payment amount, date of payment, and payment method."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: ShipZaps | Columns: SZapID (INTEGER), OrderRef (INTEGER), ZapDate (DATE), ZapCarrier (VARCHAR(90)), ZapTracking (VARCHAR(55))",
+        "output": "The \"ShipZaps\" table manages shipment details, including a unique shipment identifier, order reference, shipment date, carrier information, and tracking number."
+    },
+    {
+        "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents.",
+        "input": "Table name: FdbkTwists | Columns: FTwistID (INTEGER), UserRef (INTEGER), TwistComments (TEXT), TwistRating (INTEGER), TwistDate (DATE)",
+        "output": "The \"FdbkTwists\" table collects user feedback, including a unique feedback identifier, user reference ID, comments, rating, and the date the feedback was provided."
+    }
+]

@@ -3,8 +3,9 @@ import json
 import random
 import hashlib
 
-# Ollama API endpoint
+# Constant Variables
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
+INITIAL_SAMPLES = "initial_samples.txt"
 
 # Function to generate a prompt based on existing samples
 def generate_prompt(samples):
@@ -63,7 +64,7 @@ def generate_dataset(existing_samples, num_new_samples, max_attempts=3):
     attempts = 0
     while len(new_samples) < num_new_samples and attempts < max_attempts * num_new_samples:
         # Select a random subset of existing samples to use as context
-        context_samples = random.sample(existing_samples, min(3, len(existing_samples)))
+        context_samples = random.sample(existing_samples, min(5, len(existing_samples)))
         prompt = generate_prompt(context_samples)
         new_sample_text = generate_sample(prompt)
         if new_sample_text:
@@ -91,7 +92,7 @@ def save_to_json(samples, filename):
         json.dump(samples, f, ensure_ascii=False, indent=2)
 
 # Example usage
-existing_samples = json.loads(open('paste.txt').read())
+existing_samples = json.loads(open(INITIAL_SAMPLES).read())
 
 num_new_samples = 5
 new_samples = generate_dataset(existing_samples, num_new_samples)
