@@ -1,0 +1,52 @@
+[
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransactions | Columns: BTID (INTEGER), AccountNumber (VARCHAR(20)), TransactionType (VARCHAR(15)), TransactionDate (DATE), Amount (DECIMAL(10,2)) ",
+    "output": "The \"BankTransactions\" table records the details of banking transactions, including a unique transaction identifier, the account number involved, the type of transaction, the date of the transaction, and the amount transferred."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccBalances | Columns: ABalID (INTEGER), CustRef (INTEGER), BalanceAmt (DECIMAL(12,2)), LastUpdated (TIMESTAMP), AcctType (VARCHAR(20)) ",
+    "output": "The \"AccBalances\" table stores customer account balance information, including a unique identifier, customer reference ID, current balance amount, last update timestamp, and account type."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankCards | Columns: BCID (INTEGER), CardType (VARCHAR(20)), CardNum (VARCHAR(20)), ExpiryDate (DATE), CardLimit (DECIMAL(10,2)) ",
+    "output": "The \"BankCards\" table stores information about bank cards, including a unique card identifier, type of card, card number, expiration date, and credit limit."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AcctTrans | Columns: ACTID (INTEGER), UserAcct (VARCHAR(20)), TransType (VARCHAR(10)), TransDate (DATE), TransAmt (DECIMAL(12,2))) ",
+    "output": "The \"AcctTrans\" table records account transactions, including a unique transaction identifier, the associated user account, the type of transaction, the date of the transaction, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankAccounts | Columns: AccNum (VARCHAR(20)), AccType (VARCHAR(50)), Balance (DECIMAL(12,2)), OpenDate (DATE), LastActivity (TIMESTAMP)) ",
+    "output": "The \"BankAccounts\" table stores information about customer bank accounts, including the account number, type of account, current balance, date the account was opened, and a timestamp for the last transaction or activity."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AcctTrans | Columns: TransID (INTEGER), AcctNum (VARCHAR(20)), TransDate (DATE), TransType (VARCHAR(10)), Amount (DECIMAL(12,2)) ",
+    "output": "The \"AcctTrans\" table records transaction history for bank accounts, including a unique transaction identifier, account number, transaction date, transaction type, and the amount of the transaction."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccountTransactions | Columns: ATID (INTEGER), AcctNumber (VARCHAR(20)), TransType (VARCHAR(15)), TransDate (DATE), TransAmount (DECIMAL(10,2)), Notes (TEXT) ",
+    "output": "The \"AccountTransactions\" table records all transactions related to bank accounts, including a unique transaction ID, account number, type of transaction, date of transaction, amount involved, and any additional notes or comments."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransactions | Columns: TransID (INTEGER), AccNumber (VARCHAR(20)), TransDate (DATE), TransType (VARCHAR(10)), Amount (DECIMAL(10,2)) ",
+    "output": "The \"BankTransactions\" table records financial transactions related to bank accounts, including a unique transaction identifier, account number, date of transaction, type of transaction, and the amount involved."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankCards | Columns: BCardID (INTEGER), CardType (VARCHAR(30)), CardNumber (CHAR(19)), ExpiryDate (DATE), SecurityCode (CHAR(4)), CardLimit (DECIMAL(10,2)) ",
+    "output": "The \"BankCards\" table stores information about customer credit or debit cards, including a unique card identifier, the type of card, the card number, expiration date, security code, and spending limit."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccHist | Columns: AHistID (UUID), AcctRef (INTEGER), TranDate (DATE), TranType (VARCHAR(20)), TranAmt (DECIMAL(12,2)) ",
+    "output": "The \"AccHist\" table stores account transaction history, recording a unique identifier, account reference ID, transaction date, transaction type, and transaction amount."
+  }
+]

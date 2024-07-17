@@ -1,0 +1,52 @@
+[
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccHolds | Columns: AHoldID (INTEGER), CustRefID (INTEGER), HoldType (VARCHAR(20)), HoldAmount (DECIMAL(10,2)), HoldDate (DATE) ",
+    "output": "The \"AccHolds\" table manages customer account holds, storing a unique hold identifier, customer reference ID, type of hold, amount held, and the date of the hold."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: TransActs | Columns: TActID (INTEGER), AccountNo (VARCHAR(20)), TransDate (DATE), TransType (VARCHAR(10)), TransAmt (DECIMAL(12,2)) ",
+    "output": "The \"TransActs\" table records transaction details, including a unique transaction identifier, account number, transaction date, type of transaction, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccTrans | Columns: ATID (INTEGER), AccountRef (INTEGER), TransType (VARCHAR(50)), TransDate (DATE), TransAmount (DECIMAL(10,2)) ",
+    "output": "The \"AccTrans\" table records account transactions, including a unique transaction ID, the associated account reference, the type of transaction, the date of the transaction, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccStmts | Columns: StmtID (INTEGER), AcctNum (VARCHAR(20)), StmtDate (DATE), StmtType (VARCHAR(15)), StmtBalance (DECIMAL(12,2)) ",
+    "output": "The \"AccStmts\" table stores bank statement information, including a unique statement identifier, account number, statement date, statement type, and account balance."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankAccounts | Columns: AccNum (VARCHAR(20)), AccType (VARCHAR(50)), OpenDate (DATE), Balance (DECIMAL(15,2)), BranchID (INTEGER), LastTxn (TIMESTAMP)) ",
+    "output": "The \"BankAccounts\" table stores customer bank account information, including the account number, type of account, opening date, current balance, branch identifier, and timestamp of the last transaction."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTrans | Columns: TransID (INTEGER), AccNum (VARCHAR(20)), TransDate (DATE), TransType (VARCHAR(10)), TransAmount (DECIMAL(12,2)) ",
+    "output": "The \"BankTrans\" table stores information about banking transactions, including a unique transaction identifier, account number, date of transaction, type of transaction, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: CustStmts | Columns: StmtID (INTEGER), AccRef (INTEGER), StmtDate (DATE), StmtAmt (DECIMAL(10,2)), StmtStatus (VARCHAR(20)) ",
+    "output": "The \"CustStmts\" table stores customer statement information, including a unique statement identifier, account reference, statement date, statement amount, and the current status of the statement."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccountHolders | Columns: AHID (INTEGER), HolderName (VARCHAR(150)), AcctType (VARCHAR(30)), OpenDate (DATE), Balance (DECIMAL(10,2)) ",
+    "output": "The \"AccountHolders\" table stores information about bank account holders, including a unique holder identifier, the holder's name, the type of account, the date the account was opened, and the current balance."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankAccts | Columns: BAID (INTEGER), CustID (INTEGER), AcctType (VARCHAR(20)), AcctBal (DECIMAL(12,2)), AcctOpenDate (DATE) ",
+    "output": "The \"BankAccts\" table stores customer account information, including a unique account identifier, customer ID, account type, current balance, and account opening date."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccTrans | Columns: TransID (INTEGER), AcctNum (VARCHAR(20)), TransType (VARCHAR(10)), TransDate (DATE), TransAmt (DECIMAL(12,2)), TransDesc (TEXT) ",
+    "output": "The \"AccTrans\" table records transaction history for bank accounts, including a unique transaction identifier, account number, transaction type, date of transaction, amount, and a brief description."
+  }
+]

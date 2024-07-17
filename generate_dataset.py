@@ -4,10 +4,15 @@ import random
 import hashlib
 import os
 
+# TO-DO
+# -> Make previous generations reusable (with the actual code, in order to ensure that new samples are crated, all previously created samples must be loaded as initial samples)
+# -> ...
+
+
 # Constant Variables
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 INITIAL_SAMPLES = "initial_samples.txt"
-NUM_NEW_SAMPLES = 5000
+NUM_NEW_SAMPLES = 5000 
 BATCH_SIZE = 10
 SAVE_DIR = "sample_batches"
 

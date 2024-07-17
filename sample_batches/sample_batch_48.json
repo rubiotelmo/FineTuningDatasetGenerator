@@ -1,0 +1,52 @@
+[
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccTxns | Columns: TxnID (INTEGER), AccNum (VARCHAR(15)), TxnDate (DATE), TxnType (VARCHAR(10)), TxnAmt (DECIMAL(12,2)) ",
+    "output": "The \"AccTxns\" table records and stores account transactions, including a unique transaction identifier, account number, date of transaction, transaction type, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccHoldings | Columns: AHoldingID (INTEGER), AccNum (VARCHAR(20)), HoldingType (VARCHAR(40)), HoldingValue (DECIMAL(12,2)), LastUpdated (TIMESTAMP)) ",
+    "output": "The \"AccHoldings\" table stores account holdings data, including a unique holding identifier, account number, type of holding, value of the holding, and the timestamp of the last update."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AcctTransactions | Columns: TranID (INTEGER), AcctNum (VARCHAR(20)), TranType (VARCHAR(10)), TranDate (DATE), TranAmount (DECIMAL(12,2)) ",
+    "output": "The \"AcctTransactions\" table records financial transactions related to various bank accounts, including a unique transaction identifier, account number, transaction type, date of the transaction, and the transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankBranches | Columns: BBID (INTEGER), BranchName (VARCHAR(100)), Address (VARCHAR(200)), City (VARCHAR(50)), State (CHAR(2)), Zip (VARCHAR(10)) ",
+    "output": "The \"BankBranches\" table stores information about bank branches, including a unique branch identifier, branch name, physical address, city, state, and zip code."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTrans | Columns: BTID (INTEGER), AccountNum (VARCHAR(20)), TransDate (DATE), TransType (VARCHAR(10)), Amount (DECIMAL(12,2)), PayeeName (VARCHAR(50)) ",
+    "output": "The \"BankTrans\" table stores information about bank transactions, including a unique transaction identifier, the account number involved, the date of the transaction, the type of transaction, the amount transferred, and the name of the payee."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankBranches | Columns: BBID (INTEGER), BranchName (VARCHAR(80)), AddressLine1 (VARCHAR(100)), City (VARCHAR(50)), State (VARCHAR(2)), ZipCode (VARCHAR(10)) ",
+    "output": "The \"BankBranches\" table stores information about the various branches of a bank, including a unique branch identifier, branch name, address, city, state, and zip code."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransfers | Columns: BTID (INTEGER), AccountNo (VARCHAR(20)), TransferAmount (DECIMAL(12,2)), TransferDate (DATE), TransferType (VARCHAR(30)) ",
+    "output": "The \"BankTransfers\" table records and manages bank transfer transactions, including a unique transfer identifier, account number, transfer amount, date of transfer, and type of transfer."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankCards | Columns: BCID (INTEGER), CardType (VARCHAR(20)), CardNum (VARCHAR(25)), ExpDate (DATE), CardLimit (DECIMAL(10,2)) ",
+    "output": "The \"BankCards\" table stores information about customer credit cards, including a unique card identifier, the type of card, the card number, expiration date, and the spending limit."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccTxns | Columns: TxnID (INTEGER), AcctNo (VARCHAR(20)), TxnDate (DATE), TxnType (VARCHAR(10)), TxnAmt (DECIMAL(12,2)) ",
+    "output": "The \"AccTxns\" table records transaction history, storing a unique transaction identifier, account number, transaction date, transaction type, and transaction amount."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: CardHolders | Columns: CHID (INTEGER), CardNum (VARCHAR(20)), CardExp (DATE), HolderName (VARCHAR(70)), AddrLine1 (VARCHAR(80)), AddrLine2 (VARCHAR(80)) ",
+    "output": "The \"CardHolders\" table stores information about credit card holders, including a unique identifier, the card number, expiration date, holder's name, and their address."
+  }
+]

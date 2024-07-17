@@ -1,0 +1,52 @@
+[
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AccTrans | Columns: ATID (INTEGER), AccountNum (VARCHAR(20)), TransType (VARCHAR(10)), TransDate (DATE), Amount (DECIMAL(12,2)), Description (VARCHAR(150)) ",
+    "output": "The \"AccTrans\" table records financial transactions, including a unique transaction identifier, account number, transaction type, date, amount, and a brief description."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankAccts | Columns: AcctID (INTEGER), CustName (VARCHAR(100)), AcctType (VARCHAR(50)), BalanceAmt (DECIMAL(12,2)), OpenDate (DATE) ",
+    "output": "The \"BankAccts\" table manages customer banking information, including a unique account identifier, customer name, account type, current balance amount, and the date of account opening."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankCards | Columns: CardID (INTEGER), CardHolderName (VARCHAR(100)), CardNumber (VARCHAR(20)), ExpiryDate (DATE), CardType (VARCHAR(30)) ",
+    "output": "The \"BankCards\" table manages credit or debit card information, storing a unique card identifier, the cardholder's name, the card number, expiration date, and the type of card."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: CustAccLinks | Columns: CALID (INTEGER), UserID (INTEGER), AccType (VARCHAR(50)), AccNumber (VARCHAR(30)), LinkDate (DATE) ",
+    "output": "The \"CustAccLinks\" table stores customer account linkages, including a unique linkage identifier, user ID, account type, account number, and the date the link was established."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankAccounts | Columns: BAID (INTEGER), CustID (INTEGER), AcctType (VARCHAR(50)), Balance (DECIMAL(15,2)), OpenDate (TIMESTAMP) ",
+    "output": "The \"BankAccounts\" table manages customer banking information, storing a unique account identifier, customer ID, type of account, current balance, and the date when the account was opened."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransactions | Columns: TransactionID (UUID), AccountNumber (VARCHAR(20)), TransactionDate (DATE), Amount (DECIMAL(10,2)), TransactionType (VARCHAR(50)) ",
+    "output": "The \"BankTransactions\" table records and stores comprehensive data about financial transactions, including a unique transaction identifier, the associated account number, the date of the transaction, the transaction amount, and the type of transaction."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: AcctTransactions | Columns: ACTID (INTEGER), AccountNo (VARCHAR(20)), TransType (VARCHAR(15)), TransDate (DATE), Amount (DECIMAL(12,2)), Description (TEXT) ",
+    "output": "The \"AcctTransactions\" table records account transactions, including a unique transaction identifier, account number, transaction type, date of transaction, amount, and a brief description of the transaction."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransfers | Columns: BTID (INTEGER), AccFrom (INTEGER), AccTo (INTEGER), TransferAmt (DECIMAL(12,2)), TransferDate (TIMESTAMP) ",
+    "output": "The \"BankTransfers\" table records transfer transactions between bank accounts, including a unique transaction identifier, the account numbers of the sender and receiver, the transferred amount, and the timestamp of the transfer."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: CardHolders | Columns: CHID (INTEGER), CardType (VARCHAR(30)), CardNum (VARCHAR(20)), ExpDate (DATE), CardLimit (DECIMAL(10,2)), LastUpdate (TIMESTAMP) ",
+    "output": "The \"CardHolders\" table stores information about credit card holders, including a unique identifier, the type of card, the card number, expiration date, credit limit, and the timestamp of the last update."
+  },
+  {
+    "instruction": "Analyze the provided database table structure and generate a human-readable description of its purpose and contents. ",
+    "input": "Table name: BankTransactions | Columns: BTID (INTEGER), AccountNumber (VARCHAR(20)), TransactionType (VARCHAR(15)), Amount (DECIMAL(10,2)), Timestamp (TIMESTAMP), Description (VARCHAR(200)) ",
+    "output": "The \"BankTransactions\" table records financial transactions, including a unique transaction identifier, account number, type of transaction, amount involved, timestamp of the transaction, and a brief description of the transaction."
+  }
+]
